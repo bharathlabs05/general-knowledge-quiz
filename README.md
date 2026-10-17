@@ -1,17 +1,17 @@
 # General Knowledge Quiz
 
-A small command-line quiz built with Python as Project 4 in the DecodeLabs Python Programming internship track.
+A beginner-friendly command-line quiz built with Python as Project 4 in the DecodeLabs Python Programming internship track.
 
-The program asks three general knowledge questions, checks each answer, and prints the final score out of three.
+The quiz asks three general knowledge questions, gives feedback after each answer, and reports a final score, accuracy, and short performance message.
 
 ## Features
 
-- Three questions in a simple, repeatable question flow
-- Case-insensitive answers
-- Leading and trailing whitespace is ignored
+- Three questions stored in one easy-to-edit collection
+- A reusable function handles each question
+- Answers are case-insensitive, and surrounding whitespace is ignored
 - One point is added only when an answer is correct
-- Clear feedback after each answer and a final score using an f-string
-- No third-party packages required
+- Final score, percentage accuracy, and feedback are shown at the end
+- Uses only Python's standard library
 
 ## Requirements
 
@@ -33,7 +33,7 @@ py -3 quiz.py
 
 ## How it works
 
-For each question, the program reads the user's answer with `input()`, removes surrounding whitespace with `.strip()`, and normalizes capitalization with `.lower()`. It compares the result to the expected answer with `==`. An `if`/`else` branch prints feedback, and the integer `score` increases only for a correct answer. The final score is displayed with an f-string.
+The program stores the questions, expected answers, and display answers in `QUESTIONS`. A `for` loop sends each one to `ask_question()`. That function reads input, applies `.strip().lower()`, and uses an `if`/`else` comparison to decide whether the response is correct. `main()` adds one point for each correct answer, and `show_results()` prints the final score and accuracy with f-strings.
 
 ## Project structure
 
