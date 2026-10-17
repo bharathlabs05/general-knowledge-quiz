@@ -38,6 +38,7 @@ py -3 quiz.py
 The screenshot shows mixed-case input being accepted and the final score after one correct answer.
 
 ![Quiz run showing case-insensitive input and final score](screenshots/quiz-run.png)
+
 ## How it works
 
 The program stores the questions, expected answers, and display answers in `QUESTIONS`. A `for` loop sends each one to `ask_question()`. That function reads input, applies `.strip().lower()`, and uses an `if`/`else` comparison to decide whether the response is correct. `main()` adds one point for each correct answer, and `show_results()` prints the final score and accuracy with f-strings.
@@ -46,8 +47,9 @@ The program stores the questions, expected answers, and display answers in `QUES
 
 ```text
 general-knowledge-quiz/
-├── quiz.py       # Quiz logic and command-line interface
-├── README.md     # Setup and project overview
-└── .gitignore    # Common Python and editor-generated files
+├── quiz.py              # Quiz logic and command-line interface
+├── README.md            # Setup and project overview
+├── .gitignore           # Common Python and editor-generated files
+└── screenshots/
+    └── quiz-run.png     # Example run and score output
 ```
-
