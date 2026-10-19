@@ -33,11 +33,17 @@ py -3 quiz.py
 
 ## Screenshots
 
-### Quiz run
+### Mixed-result quiz run
 
 The screenshot shows mixed-case input being accepted and the final score after one correct answer.
 
 ![Quiz run showing case-insensitive input and final score](screenshots/quiz-run.png)
+
+### Perfect score
+
+This run shows all three answers accepted and a final score of 3/3 (100%).
+
+![Quiz run with all three answers correct and a perfect score](screenshots/quiz-perfect-score.png)
 
 ## How it works
 
@@ -51,5 +57,6 @@ general-knowledge-quiz/
 ├── README.md            # Setup and project overview
 ├── .gitignore           # Common Python and editor-generated files
 └── screenshots/
-    └── quiz-run.png     # Example run and score output
+    ├── quiz-run.png             # Mixed-result run
+    └── quiz-perfect-score.png   # All answers correct
 ```
